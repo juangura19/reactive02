@@ -1,4 +1,4 @@
-#spring:
-#  data:
-#    mongodb:
-#      uri:
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://root:root@iasd-cluster.npgxk.mongodb.net/nttdata?retryWrites=true&w=majority

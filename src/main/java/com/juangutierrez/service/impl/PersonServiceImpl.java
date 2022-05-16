@@ -29,7 +29,6 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public Flux<Person> findAll() {
         return repository.findAll()
-            .doOnError(throwable -> System.out.println(String.format("Error %s", throwable.getMessage())))
             .filter(person -> person.getStatus() == 1);
     }
 
