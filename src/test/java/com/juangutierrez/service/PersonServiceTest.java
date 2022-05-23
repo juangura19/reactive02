@@ -79,7 +79,7 @@ public class PersonServiceTest {
     @Test
     public void when_getId_error(){
         StepVerifier.create(personService.getId("627d502b827ec662ccc52387"))
-            .expectError(NotFoundException.class)
+            .expectError(RuntimeException.class)
             .verify();
     }
 
@@ -93,7 +93,7 @@ public class PersonServiceTest {
     @Test
     public void when_delete_error(){
         StepVerifier.create(personService.delete("627d502b827ec662ccc52387"))
-            .expectError(NotFoundException.class)
+            .expectError(RuntimeException.class)
             .verify();
     }
 

@@ -87,7 +87,7 @@ public class PersonaApiTest {
     @Test
     void delete(){
         this.webTestClient
-            .get()
+            .delete()
             .uri("/person/628282da1af4ea02ff5316a9")
             .accept(MediaType.APPLICATION_STREAM_JSON)
             .exchange()
