@@ -27,10 +27,6 @@ public class PersonServiceTest {
         data.setStatus(1);
         StepVerifier.create(personService.findAll())
             .expectNext(data)
-            .thenConsumeWhile(p -> {
-                assertThat(p.getStatus()).isEqualTo(1);
-                return true;
-            })
             .verifyComplete();
     }
 
